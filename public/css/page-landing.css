@@ -1,0 +1,47 @@
+
+#page-landing {
+	background: linear-gradient(329.54deg, #29b6d1 0%, #00c7c7 100%);
+	text-align: center;
+	min-height: 100vh;
+	display: flex;
+	/*align-items: center; isso pode alinhr todos os itens da pagina ao centro, porem eh necessario que o display seja flex*/
+}
+
+#container{ 
+	margin: auto; /*outra forma de alinhar todos os itens dentro do container ao centro de forma mais alinhada */
+	width: 90%; /*para definir o tamanho da restrição do container do site, assim quando mudar de dispositivo ele vai respeitar o mesmo tamanho de margem, no caso, responsivo*/
+}
+
+.location, h1, .visit p {
+	height: 16vh;
+}
+
+.visit a {
+	width: 8rem;
+	height: 8rem;
+	background: #ffd666;
+	border-radius: 3rem;
+	display: flex;
+	align-items: center; /*vai mexer de cima para baixo, em direção ao eixo X, fazendo q tudo fique alinhado com a largura*/
+	justify-content: center; /*vai mexer no eixo X para que o alinhamento do eixo Y fique perfeitamente ao meio*/
+    margin: auto;
+    transition: background .2s;
+}
+.visit a:hover {
+    background: #96feff;
+}
+#logo{
+	animation-delay: 50ms;
+}
+.location {
+	animation-delay: 100ms;
+}
+main h1 {
+	animation-delay: 150ms;
+}
+.visit p {
+	animation-delay: 200ms;
+}
+.visit a {
+	animation-delay: 250ms;
+}
