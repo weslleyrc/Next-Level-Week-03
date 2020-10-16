@@ -5,6 +5,7 @@
 * { /*tag universal, significca que a propriedade passara por todas as tags*/
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
 }
 body{
 	height: 100vh; /* fracionna a tela em 100 fragmentos, para ocupar toda a tela */
