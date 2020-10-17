@@ -1,15 +1,32 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
-		<meta charset="utf-8">
+        <meta charset="utf-8">
+
+        <!-- viewport para resposividade do site-->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Localize um orfanato | Happy</title>
-		<link rel="icon" href="./public/images/logo-icon.png">
+        <title>Localize um orfanato | Happy</title>
+        
+        <!-- bibliotecaleaflet para o mapa da aplicação, tanto o css quanto o javascript -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin=""/> 
+        
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin="">
+        </script>
+
+        <!-- chamando um logo para o titulo-->
+        <link rel="icon" href="./public/images/logo-icon.png">
+        
+        <!-- css's da pagina separada por contexto -->
 		<link rel="stylesheet" type="text/css" href="./public/css/main.css">
 		<link rel="stylesheet" type="text/css" href="./public/css/animations.css">
 		<link rel="stylesheet" type="text/css" href="./public/css/page-orphanages.css">
 
-		<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+        <!-- fonte externa 'Nunito' -->
+		<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
 
 	</head>
 	<body>
@@ -25,10 +42,11 @@
                     <p>Rio de Janeiro</p>
                 </footer>
             </aside>
-            <div id="mapip"></div>
+            <div id="mapid" class="animate-appear"></div>
             <a href="create-orphanage.html" class="create-orphanage" title="cadastre um orfanato">
                 <img src="./public/images/plus.svg" alt="Criar orfanato">
             </a>
         </div>
+        <script src="./public/scripts/page-orphanages.js"></script>
 	</body>
 </html>
