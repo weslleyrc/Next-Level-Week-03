@@ -1,9 +1,9 @@
-const options = { /*Desabilitando função de Zoom do mapa*/
+const options = { /* Desabilitando função de Zoom do mapa e movimentação do mesmo */
     dragging: false,
     touchZoom: false,
     doubleClickZoom: false,
     scrollWheelZoom: false,
-    zoomControl: false, 
+    zoomControl: false,  
 }
 
 //create map
@@ -25,4 +25,10 @@ const icon = L.icon({
 //create and add marker
 L.marker([-22.9539601,-43.2990787], { icon })
     .addTo(map)
-    
+
+/*image gallery*/
+
+function selectImage(event){
+    console.log("cliquei no botao")
+}
+
