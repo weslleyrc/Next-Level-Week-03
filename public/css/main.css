@@ -10,6 +10,7 @@
 body{
 	height: 100vh; /* fracionna a tela em 100 fragmentos, para ocupar toda a tela */
 	color: white;
+	background: #ebf2f5;
 }
 
 :root{ /* seletor que captura o elemento root, facilita para gerenciar toda alteração de fonte do site*/
