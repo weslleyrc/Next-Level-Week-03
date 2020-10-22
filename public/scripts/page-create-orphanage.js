@@ -84,9 +84,12 @@ function toggleSelect(event){
     const button = event.currentTarget
     button.classList.add('active')
 
-    //verificar se sim ou nao
-
     //atualizar o meu input hidden com o valor selecionado
+    const input = document.querySelector('[name="open_on_weekends"]')
+    
+    input.value = button.dataset.value
+    // verificar se sim ou nao
+
 
     //retirar a class .active
 
