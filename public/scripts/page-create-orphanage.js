@@ -71,7 +71,6 @@ function deleteField(event){
 }
 
 //troca da seleção de sim ou nao
-
 function toggleSelect(event){
 
     //pegar o botao clicado
@@ -88,12 +87,17 @@ function toggleSelect(event){
     const input = document.querySelector('[name="open_on_weekends"]')
     
     input.value = button.dataset.value
-    // verificar se sim ou nao
+}
 
+function validate(event){
 
-    //retirar a class .active
+    //validar se lat e lng estao preenchidos
+    const needsLatAndLng = true;
 
-    //colocar a class .active
+    if(needsLatAndLng) {
+        event.preventDefault()
+        alert('Selecione um ponto no mapa!')
+    }
 }
 
 

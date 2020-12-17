@@ -13,10 +13,19 @@ module.exports = {
 
         try {
             const db = await Database;
-            const orphanage = await db.all(`SELECT * FROM orphanages WHERE id = "${id}"`)
+            const results = await db.all(`SELECT * FROM orphanages WHERE id = "${id}"`)
+            const orphanage = results[0]
+            
+            orphanage.images = orphanage.images.split(",")
+            orphanage.firstImage = orphanage.images[0]
 
-            console.log(orphanage[0])
-            return res.render('orphanage')
+            if(orphanage.open_on_weekends == "0"){
+                orphanage.open_on_weekends = false
+            }else{
+                orphanage.open_on_weekends = true
+            }
+            
+            return res.render('orphanage', {orphanage})
         } catch (error) {
             console.log(error);
             return res.send('Erro no banco de dados!')
@@ -37,5 +46,15 @@ module.exports = {
 
     createOrphanage(req, res){
         return res.render('create-orphanage')
+    },
+
+    saveOrphanage(req,res) {
+        const fields = req.body
+        
+        //validar se todos os campos estao preenchidos
+
+        if(Object.values(fields).includes('')){
+            return res.send('Todos os campos devem ser preenchidos! ')
+        }
     }
 }

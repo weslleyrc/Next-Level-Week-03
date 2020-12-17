@@ -6,8 +6,12 @@ const options = { /* Desabilitando função de Zoom do mapa e movimentação do 
     zoomControl: false,  
 }
 
+//get values from html
+const Lat = document.querySelector('[data-lat]').dataset.lat
+const Lng = document.querySelector('[data-lng]').dataset.lng 
+
 //create map
-const map = L.map('mapid', options).setView([-22.9539601,-43.2990787], 15);
+const map = L.map('mapid', options).setView([Lat,Lng], 15);
 
 //create and add tileLayer
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
@@ -23,8 +27,10 @@ const icon = L.icon({
 
 
 //create and add marker
-L.marker([-22.9539601,-43.2990787], { icon })
-    .addTo(map)
+L.marker([Lat,Lng], { icon })
+
+//L.marker([-22.9539601,-43.2990787], { icon })
+.addTo(map)
 
 /*image gallery*/
 
