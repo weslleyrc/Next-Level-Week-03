@@ -92,7 +92,7 @@ function toggleSelect(event){
 function validate(event){
 
     //validar se lat e lng estao preenchidos
-    const needsLatAndLng = true;
+    const needsLatAndLng = false;
 
     if(needsLatAndLng) {
         event.preventDefault()
